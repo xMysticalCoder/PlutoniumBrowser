@@ -1,0 +1,81 @@
+body {
+  text-align: center; 
+  background-color: rgb(0, 17, 63);
+  font-family: "Ubuntu", sans-serif;
+  align-items: center;
+}
+
+.home-textinput {
+  float: center;
+  border: 3px solid blue;
+  border-radius: 5px;
+  font-size:  20pt;
+  transition-duration: 0.2s;
+}
+.home-textinput:hover {
+  border: 3px solid #007bff;
+
+}
+.home-button{
+  border: 1px solid blue;
+  background-color: blue;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-size: 20pt;
+  vertical-align: sup;
+  transition-duration: 0.2s;
+}
+.home-button:hover{
+  background-color: #007bff;
+  border: 1px solid #007bff;
+}
+.bottom-row-button{
+  float: left;
+  border: 5px solid #3874ff;
+  background-color: blue;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  font-size: 14pt;
+  transition-duration: 0.2s;
+}
+.bottom-row-button:hover{
+  background-color: #007bff;
+}
+.container {
+  margin: auto;
+  width: max;
+  height: max;
+  display: flex;
+  position: relative;
+  border: 3px solid #00113f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 50%;
+  transform: translate(0, -50%);
+  content: "";
+  clear: both;
+  display: table;
+}
+.bottom-row{
+  width: 100%;
+  height: max;
+  position: absolute;
+  bottom: 0px;
+  border: 3px solid #3874ff;
+  background-color: #3874ff;
+  content: "";
+  clear: both;
+  display: table;
+  position: bottom;
+  left: 0px;
+}
+.home-title{
+  color: white;
+  position: relative;
+  top: 0;
+  font-size: 30pt;
+  margin: 0;
+}
