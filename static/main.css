@@ -80,3 +80,13 @@
   font-size: 30pt;
   margin: 0;
 }
+.header{
+  width: 100%;
+  height: max;
+  color: white;
+  position: static;
+  top: 0px;
+  background-color: #3874ff;
+  left: 0px;
+  position: top;
+}
