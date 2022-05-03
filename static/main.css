@@ -90,3 +90,17 @@
   left: 0px;
   position: top;
 }
+.ad_div{
+  width: 100%;
+  height: max;
+  position: absolute;
+  bottom: 0px;
+  border: 3px solid #3874ff;
+  background-color: #3874ff;
+  color: white;
+  content: "";
+  clear: both;
+  display: table;
+  position: bottom;
+  left: 0px;
+}

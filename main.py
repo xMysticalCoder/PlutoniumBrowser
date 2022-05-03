@@ -2,6 +2,7 @@
 import random, string
 from flask import Flask, render_template, request, url_for
 from replit import db
+import random
 
 f = Flask(  # Create a flask app
     __name__,
@@ -16,13 +17,26 @@ def resetWebsites():
         d = db[i][1]
         del db[i]
         print(f"Deleted {i} with password {p} and data: {d}")
+def resetAds():
+  db["ads"] = []
+  print("Reset all advertisements")
+
+def resetAll():
+  for i in db.prefix("website:"):
+        p = db[i][0]
+        d = db[i][1]
+        del db[i]
+        print(f"Deleted {i} with password {p} and data: {d}")
+  db["ads"] = []
+  print("Reset database")
+  
 
 
-resetWebsites()
-db["website:google.com"] = "testing lol 123"
-del db["website:google.com"]
+
+
+
 ok_chars = string.ascii_letters + string.digits
-resetWebsites()
+#resetAll()
 
 
 @f.route('/')
@@ -38,10 +52,12 @@ def search():
         website = request.form.get('url')
         if "website:" + website in db.prefix("website:"):
             data = db["website:" + website][1]
+            
             print("Website")
         else:
             data = "404 Website Not Found"
-        return render_template('search.html', data=data, website=website)
+        ad = db["ads"][random.randint(0,len(db["ads"]))-1]
+        return render_template('search.html', data=data, website=website, advertisement=ad)
     else:
         return render_template("home.html")
 
@@ -99,7 +115,24 @@ def editWebVerify():
 
     else:
         return render_template("editweb.html")
+@f.route("/signup", methods=["POST", "GET"])
+def signup():
+  return render_template("signup.html")
 
+@f.route("/createad", methods=["POST", "GET"])
+def createAd():
+  return render_template("createad.html")
+@f.route("/createadverify", methods=["POST", "GET"])
+def createAdVerify():
+  if request.method == "POST":
+    adData = request.form.get("createaddata")
+    if adData in db["ads"]:
+      return render_template("createadfail1.html")
+    else:
+      db["ads"] = list(db["ads"]) + [adData]
+      return render_template("createadsuccess.html", data=adData)
+  else:
+    return render_template("createad.html")
 
 if __name__ == "__main__": 
     f.run(  
