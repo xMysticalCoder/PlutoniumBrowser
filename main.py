@@ -1,4 +1,8 @@
 #WEBSITE FORMAT = db["website:"+webname] = [password, data]
+from geopy.geocoders import Nominatim
+from timezonefinder import TimezoneFinder
+from datetime import datetime
+import pytz
 import random, string
 from flask import Flask, render_template, request, url_for
 from replit import db
@@ -29,6 +33,24 @@ def resetAll():
         print(f"Deleted {i} with password {p} and data: {d}")
   db["ads"] = []
   print("Reset database")
+
+
+def currentTime(city):
+  geolocator = Nominatim(user_agent="geoapiExercises")
+
+  lad = city
+  location = geolocator.geocode(lad)
+  obj = TimezoneFinder()
+
+  # returns timezone
+  result = obj.timezone_at(lng=location.longitude, lat=location.latitude)
+  print("Time Zone : ", result)
+
+  tzinput = pytz.timezone(result)
+
+  datetimeintz = datetime.now(tzinput)
+
+  return datetimeintz.strftime("%H:%M:%S")
   
 
 
@@ -55,7 +77,7 @@ def search():
             
             print("Website")
         else:
-            data = "404 Website Not Found"
+            data = " Error 404 Website Not Found"
         ad = db["ads"][random.randint(0,len(db["ads"]))-1]
         return render_template('search.html', data=data, website=website, advertisement=ad)
     else:

@@ -104,3 +104,8 @@
   position: bottom;
   left: 0px;
 }
+.time{
+  color: white;
+  font-size: 14pt;
+  float: right;
+}
