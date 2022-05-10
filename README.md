@@ -1,6 +1,10 @@
 # PlutoniumNetwork Web Version
 Welcome to PlutoniumNetwork WV, the safe browser made by scratchers, for scratchers. This is the web version of [PlutoniumNetwork](https://scratch.mit.edu/projects/658854833) on Scratch.
 
+![cur_version](https://img.shields.io/badge/Current%20Version-2.1.0-blue?style=flat)
+![stable?](https://img.shields.io/badge/Stablility-Unstable-critical?style=flat)
+![apply](https://img.shields.io/badge/Applications-Open-green?style=flat)
+
 ### Features:
 - Website creation
 - Website editing
