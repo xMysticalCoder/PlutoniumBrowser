@@ -3,7 +3,11 @@ Welcome to PlutoniumNetwork WV, the safe browser made by scratchers, for scratch
 
 ![cur_version](https://img.shields.io/badge/Current%20Version-2.1.0-blue?style=flat)
 ![stable?](https://img.shields.io/badge/Stablility-Unstable-critical?style=flat)
-![apply](https://img.shields.io/badge/Applications-Open-green?style=flat)
+![apply](https://img.shields.io/badge/Applications-Open-djdj?style=flat)
+![Replit](https://img.shields.io/badge/Replit-DD1200?style=flat&logo=Replit&logoColor=white)
+![Python](https://img.shields.io/badge/python-3670A0?style=flat&logo=python&logoColor=ffdd54)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=flat&logo=html5&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=flat&logo=javascript&logoColor=%23F7DF1E)
 
 ### Features:
 - Website creation
@@ -24,4 +28,9 @@ For reference, 1mb is 1,048,576 characters and the max characters 1 advertisemen
 Applications are currently OPEN
 Looking for artists. Please apply by clicking the **Sign Up** button on the home page.
 
-#### Safe browsing!
+### Platforms
+- Scratch
+- Replit
+- Github
+
+**Safe browsing!**
